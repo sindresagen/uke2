@@ -8,13 +8,19 @@
 <body>
     <h2>Hva heter Asias største øy?</h2>
     <h2 id="a1" onclick="doSomething()">Borneo</h2>
-    <h2 id="a2" onclick="doSomething()">Japan</h2>
-    <h2 id="a3" onclick="doSomething()">Korea</h2>
+    <h2 id="a2" onclick="doSomething1()">Japan</h2>
+    <h2 id="a3" onclick="doSomething2()">Korea</h2>
 
     <script>
         function doSomething() {
-            document.getElementById('a1').innerHTML = 'riktig!';
+            document.getElementById('a1').innerHTML = 'riktig!';           
+        }
+        
+        function doSomething1() {
             document.getElementById('a2').innerHTML = 'feil!';
+        }
+
+        function doSomething2() {
             document.getElementById('a3').innerHTML = 'feil!';
         }
     </script>
