@@ -11,7 +11,7 @@
     <p>Ferdighet 2a - Alternative eventhandlere: onchange osv.</p>
     <input type="text" onkeydown="testOnKeyDown()"/>
     <h3 oncontextmenu="testOnContextMenu()" ondblclick="testOnDbl()">Test test test</h3>
-    <h2 id="info"></h2>
+    
 
     <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Elephant.jpg" />
 
@@ -19,15 +19,15 @@
     <script>
 
         function testOnKeyDown() {
-            document.getElementById('info').innerHTML += '<li>onkeydown</li>';
+            console.log('onkeydown');
         }
 
         function testOnDbl() {
-            document.getElementById('info').innerHTML += '<li>ondblclick</li>';
+            console.log('ondblclick');
         }
 
         function testOnContextMenu() {
-            document.getElementById('info').innerHTML += '<li>oncontextmenu</li>';
+            console.log('oncontextmenu');
         }
 
     </script>
