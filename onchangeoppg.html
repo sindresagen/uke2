@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Ferdighet 2a - Alternative eventhandlere: onchange osv.</p>
+    <input type="text" onkeydown="testOnKeyDown()"/>
+    <h3 oncontextmenu="testOnContextMenu()" ondblclick="testOnDbl()">Test test test</h3>
+    <h2 id="info"></h2>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Elephant.jpg" />
+
+    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">Mer informasjon her</a>
+    <script>
+
+        function testOnKeyDown() {
+            document.getElementById('info').innerHTML += '<li>onkeydown</li>';
+        }
+
+        function testOnDbl() {
+            document.getElementById('info').innerHTML += '<li>ondblclick</li>';
+        }
+
+        function testOnContextMenu() {
+            document.getElementById('info').innerHTML += '<li>oncontextmenu</li>';
+        }
+
+    </script>
+
+</body>
+
+</html>
