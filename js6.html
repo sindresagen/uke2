@@ -22,7 +22,7 @@
     <select id="borderChooser" onchange="showDiv()">
         <option value="solid Black">Black border</option>
         <option value="solid Gray">Gray border</option>
-        <option selected value="three">No border</option>
+        <option selected value="none">No border</option>
     </select>
     <div id="resultat"></div>
     <div id="resultatHtml" style="font-family: monospace"></div>
@@ -44,7 +44,7 @@
                 + 'height: ' + sizeSlider.value + 'px;'
                 + 'border: ' + borderChooser.value + ';'
                 + 'border-radius: ' + borderSlider.value + 'px;'
-                + 'border-size: ' + borderSize.value + 'px;'
+                + 'border-width: ' + borderSize.value + 'px;'
                 + '">' +
                 textInput.value + '</div>';
             resultatHtmlDiv.innerText = resultatDiv.innerHTML;
