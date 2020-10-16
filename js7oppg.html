@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Ferdighet 7 - Sette variabel til resultat av et regnestykke. </p>
+    <input id="width" type="range" min="1" max="1000" step="1" oninput="calculate()" />
+    <input id="height" type="range" min="1" max="1000" step="1" oninput="calculate()" />
+    <div id="resultat"></div>
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var widthInput = document.getElementById('width');
+        var heightInput = document.getElementById('height');
+
+        calculate();
+
+        function calculate() {
+            var width = parseInt(widthInput.value);
+            var height = parseInt(heightInput.value);
+            var sum = (width * 2) + (height * 2);
+            var differense = width - height;
+            var produkt = width * height;
+            var kvotient = width / height;
+            resultatDiv.innerHTML = '' +
+                'omkrets: ' + (width * 2) + '+' + (height * 2) + '=' + sum + ' = omkresten' + '<br/>' +
+                // width + '-' + height + '=' + differense + '<br/>' +
+                'areal: ' + width + '*' + height + '=' + produkt + ' = m2';
+                // width + '/' + height + '=' + kvotient;
+        }
+    </script>
+</body>
+</html>
