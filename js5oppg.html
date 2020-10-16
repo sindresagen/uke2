@@ -6,14 +6,11 @@
     <title>Document</title>
 </head>
 <body onload="timeLog()">
-    
-    <h2 id="a"></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Austria_-_landscape_2018_%2842453808630%29.jpg" alt="landscape">
+    <div id="a"></div>
+    <div id="b"></div>
     <script>
-        document.getElementById('a').onload = function() {timeLog2()}; 
-
-        function timeLog2() {
-            document.getElementById('a').innerHTML = 'Under lasting av siden:' + new Date().toTimeString();
-        }
+        document.getElementById('b').innerHTML = 'Under lasting av siden:' + new Date().toTimeString(); 
 
         function timeLog() {
             document.getElementById('a').innerHTML = 'Etter lasting av siden:' + new Date().toTimeString();
@@ -21,7 +18,5 @@
         }
         
     </script>
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Austria_-_landscape_2018_%2842453808630%29.jpg" alt="">
 </body>
 </html>
