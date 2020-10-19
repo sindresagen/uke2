@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -8,53 +9,59 @@
             border: 5px solid gray;
             border-radius: 10px;
         }
+
         .padding {
             padding-top: 50px;
             padding-right: 30px;
             padding-bottom: 50px;
             padding-left: 80px;
         }
+
         .margin {
             margin-top: 100px;
             margin-bottom: 100px;
             margin-right: 150px;
             margin-left: 80px;
         }
+
         .bkcolor {
             background-color: orange;
         }
+
         .color {
             color: blueviolet;
         }
+
         div.selected::before {
             content: "🡆";
         }
+
         div.selected::after {
             content: "🡄";
         }
-
     </style>
 </head>
+
 <body>
     <p>Ferdighet 8 - Endre andre ting enn innerHTML: value, style</p>
     <input id="text" type="text" />
     <h2 id="overskrift">Overskrift</h2>
-    <button onclick="doSomethingA(this)">A</button>
-    <button onclick="doSomethingB(this)">B</button>
-    <div id="bla" onclick="select1(this)">Bla bla bla</div>
-    <div id="bla2" onclick="select2(this)">Bleh bleh bleh</div>
+
+    <div id="bla" onclick="select(this)">Bla bla bla</div>
+    <div id="bla2" onclick="select(this)">Bleh bleh bleh</div>
     <input id="chk" type="checkbox" onchange="toggleStyle()" />
     <input id="chk1" type="checkbox" onchange="toggleStyle1()" />
     <input id="chk2" type="checkbox" onchange="toggleStyle2()" />
     <input id="chk3" type="checkbox" onchange="toggleStyle3()" />
     <input id="chk4" type="checkbox" onchange="toggleStyle4()" />
     <script>
-        function select1() {
-            document.getElementById('bla').classList.toggle('selected')
+        var selectedDiv = document.getElementById('bla')
+
+        function select(clickDiv) {
+            selectedDiv = clickDiv;
+            selectedDiv.classList.toggle('selected')
         }
-        function select2() {
-            document.getElementById('bla2').classList.toggle('selected')
-        }
+        
         function toggleStyle() {
             var isChecked = document.getElementById('chk').checked;
             document.getElementById('bla', 'bla2').classList.toggle('padding', isChecked);
@@ -65,7 +72,7 @@
         }
         function toggleStyle2() {
             var isChecked = document.getElementById('chk2').checked;
-            document.getElementById('bla','bla2').classList.toggle('margin', isChecked);
+            document.getElementById('bla', 'bla2').classList.toggle('margin', isChecked);
         }
         function toggleStyle3() {
             var isChecked = document.getElementById('chk3').checked;
@@ -76,41 +83,8 @@
             document.getElementById('bla', 'bla2').classList.toggle('color', isChecked);
         }
 
-        var textInput = document.getElementById('text');
-        var h2Element = document.getElementById('overskrift');
-
-        function doSomethingA(clickedElement) {
-            textInput.style.backgroundColor = 'aquamarine';
-            h2Element.style.backgroundColor = 'aquamarine';
-            clickedElement.style.backgroundColor = 'aquamarine';
-
-            textInput.classList.add('round');
-            h2Element.classList.add('round');
-            clickedElement.classList.add('round');
-
-            textInput.value = "Trykket på knapp A";
-        }
-
-        function doSomethingB(clickedElement) {
-            textInput.style.backgroundColor = 'blue';
-            h2Element.style.backgroundColor = 'blue';
-            clickedElement.style.backgroundColor = 'blue';
-
-            textInput.style.color = 'whitesmoke';
-            h2Element.style.color = 'whitesmoke';
-            clickedElement.style.color = 'whitesmoke';
-
-            textInput.style.fontWeight = 'bolder';
-            h2Element.style.fontWeight = 'bolder';
-            clickedElement.style.fontWeight ='bolder';
-
-            textInput.classList.remove('round');
-            h2Element.classList.remove('round');
-            clickedElement.classList.remove('round');
-
-            textInput.value = "Trykket på knapp B";
-        }
     </script>
 
 </body>
+
 </html>
