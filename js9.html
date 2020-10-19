@@ -26,6 +26,12 @@
         .color {
             color: blueviolet;
         }
+        div.selected::before {
+            content: "🡆";
+        }
+        div.selected::after {
+            content: "🡄";
+        }
 
     </style>
 </head>
@@ -35,32 +41,39 @@
     <h2 id="overskrift">Overskrift</h2>
     <button onclick="doSomethingA(this)">A</button>
     <button onclick="doSomethingB(this)">B</button>
-    <div id="bla">Bla bla bla</div>
+    <div id="bla" onclick="select1(this)">Bla bla bla</div>
+    <div id="bla2" onclick="select2(this)">Bleh bleh bleh</div>
     <input id="chk" type="checkbox" onchange="toggleStyle()" />
     <input id="chk1" type="checkbox" onchange="toggleStyle1()" />
     <input id="chk2" type="checkbox" onchange="toggleStyle2()" />
     <input id="chk3" type="checkbox" onchange="toggleStyle3()" />
     <input id="chk4" type="checkbox" onchange="toggleStyle4()" />
     <script>
+        function select1() {
+            document.getElementById('bla').classList.toggle('selected')
+        }
+        function select2() {
+            document.getElementById('bla2').classList.toggle('selected')
+        }
         function toggleStyle() {
             var isChecked = document.getElementById('chk').checked;
-            document.getElementById('bla').classList.toggle('padding', isChecked);
+            document.getElementById('bla', 'bla2').classList.toggle('padding', isChecked);
         }
         function toggleStyle1() {
             var isChecked = document.getElementById('chk1').checked;
-            document.getElementById('bla').classList.toggle('round', isChecked);
+            document.getElementById('bla', 'bla2').classList.toggle('round', isChecked);
         }
         function toggleStyle2() {
             var isChecked = document.getElementById('chk2').checked;
-            document.getElementById('bla').classList.toggle('margin', isChecked);
+            document.getElementById('bla','bla2').classList.toggle('margin', isChecked);
         }
         function toggleStyle3() {
             var isChecked = document.getElementById('chk3').checked;
-            document.getElementById('bla').classList.toggle('bkcolor', isChecked);
+            document.getElementById('bla', 'bla2').classList.toggle('bkcolor', isChecked);
         }
         function toggleStyle4() {
             var isChecked = document.getElementById('chk4').checked;
-            document.getElementById('bla').classList.toggle('color', isChecked);
+            document.getElementById('bla', 'bla2').classList.toggle('color', isChecked);
         }
 
         var textInput = document.getElementById('text');
