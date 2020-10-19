@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <p>Ferdighet 8 math.random</p>
+
+    
+
+
+
+    <div id="resultat"></div>
+
+    <script>
+        var tallA =  100 + Math.floor(Math.random() * 400);
+        var tallB =  100 + Math.floor(Math.random() * 400);
+        var tallC = 2 + Math.floor(Math.random() * 98);
+
+        
+        
+        var resultatDiv = document.getElementById('resultat');
+
+        showDiv();
+
+        function showDiv() {
+            resultatDiv.innerHTML = '<div style="'
+                + 'background-color: ' + "blue" + ';'
+                + 'width: ' + tallA + 'px;'
+                + 'height: ' + tallB + 'px;'
+                + 'border-radius: ' + tallC + 'px;'
+                + 'border-color: ' + "red" + 'px;'
+                + 'border-width:' + tallC + '">' +
+                "Math objekter" + '</div>';
+            
+        }
+    </script>
+</body>
+
+</html
