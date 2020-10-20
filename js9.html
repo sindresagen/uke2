@@ -55,32 +55,37 @@
     <input id="chk3" type="checkbox" onchange="toggleStyle3()" />
     <input id="chk4" type="checkbox" onchange="toggleStyle4()" />
     <script>
-        var selectedDiv = document.getElementById('bla')
+        var selectedDiv = document.getElementById()
 
         function select(clickDiv) {
             selectedDiv = clickDiv;
-            selectedDiv.classList.toggle('selected')
+            selectedDiv.classList.toggle('selected');
         }
 
         function toggleStyle() {
             var isChecked = document.getElementById('chk').checked;
             selectedDiv.classList.toggle('padding', isChecked);
+            document.getElementById('chk').checked = selectedDiv.classList.contains('padding');
         }
         function toggleStyle1() {
             var isChecked = document.getElementById('chk1').checked;
             selectedDiv.classList.toggle('round', isChecked);
+            document.getElementById('chk1').checked = selectedDiv.classList.contains('round');
         }
         function toggleStyle2() {
             var isChecked = document.getElementById('chk2').checked;
             selectedDiv.classList.toggle('margin', isChecked);
+            document.getElementById('chk2').checked = selectedDiv.classList.contains('margin');
         }
         function toggleStyle3() {
             var isChecked = document.getElementById('chk3').checked;
             selectedDiv.classList.toggle('bkcolor', isChecked);
+            document.getElementById('chk3').checked = selectedDiv.classList.contains('bkcolor');
         }
         function toggleStyle4() {
             var isChecked = document.getElementById('chk4').checked;
             selectedDiv.classList.toggle('color', isChecked);
+            document.getElementById('chk4').checked = selectedDiv.classList.contains('color');
         }
 
     </script>
