@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="testOnLoad()">
+    <p>Ferdighet 2a - Alternative eventhandlere: onchange osv.</p>
+    <input id="oninput" type="text" oninput="select(this)"/>
+    <h3 id="onmouseover" onmouseover="select(this)">mouseover</h3>
+    <h2 id="info"></h2>
+
+    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">Mer informasjon her</a>
+    <script>
+        var selectedDiv = '';
+        function select(clickDiv) {
+            selectedDiv = clickDiv;
+            if (selectedDiv.id == 'oninput') {
+                document.getElementById('info').innerHTML += '<li>onchange</li>';
+            } else if (selectedDiv.id == 'onmouseover') {
+                document.getElementById('info').innerHTML += '<li>onmouseover</li>';
+            }
+        };
+    </script>
+</body>
+</html>

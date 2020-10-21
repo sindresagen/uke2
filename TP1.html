@@ -14,89 +14,211 @@
     <link rel="stylesheet" href="">
 </head>
 
-<body>
-<script>
-    function goA() {
-        document.getElementById('background').style.backgroundColor = 'blue';
-    }
-    function ourFunction1() {
-        document.body.style.backgroundColor = 'blue';
-        document.getElementById('1').innerHTML = '';
-    }
-    function ourFunction2() {
-        document.body.style.backgroundImage = "url('')"
-        document.getElementById('2').innerHTML = '';
-    }
-    function ourFunction3() { 
-        document.getElementById('info').innerHTML = 'Hello';
-    }
-    function ourFunction4() {
-        document.getElementById('4').outerHTML = '';
-        <style>
-             
-        </style>
-    }
-    function ourFunction5() {
-        document.getElementById('5').innerHTML = '';
-    }
-    function ourFunction6() {
-        document.getElementById('6').innerHTML = '';
-    }
-    function ourFunction7() {
-        document.getElementById('7').innerHTML = '';
-    }
-    function ourFunction8() {
-        document.getElementById('8').innerHTML = '';
-    }
-    function ourFunction9() {
-        document.getElementById('info').innerHTML += '1992123123';
-    }
-    function tell1() {
-        document.getElementById('info').innerHTML += '1'
-    }
-    
-</script>
-    <style>
-        .grid-container {
+
+<style>
+    .grid-container {
         display: grid;
         grid-template-columns: 300px 300px 300px;
         grid-template-rows: 300px 300px 300px;
         padding: 10px;
         width: 900px;
-        background-color:crimson;
-        border: solid green;
-        border-radius: 12px;
-    
-        }
-        .grid-item {
+        border: purple;
+        border-radius: 37px;
+
+    }
+
+    .grid-item {
         background-color: blueviolet;
         border: 1px solid rgba(0, 0, 0, 0.8);
         padding: 20px;
         font-size: 30px;
         text-align: center;
-        
-        }
-        #info {
-            clear: right;
-        }
-        
-    </style>
-    
+
+    }
+
+    #info {
+        clear: right;
+    }
+
+    #btn3 {
+        background-image: url('https://cdn.pixabay.com/photo/2019/04/14/20/05/duck-meet-4127713_960_720.jpg');
+    }
+
+    #btn1 {
+        background-image: url('https://p0.pikrepo.com/preview/162/599/elephant-walking-on-brown-field-during-daytime.jpg');
+        background-position: center;
+    }
+
+    #btn2 {
+        background-image: url('https://live.staticflickr.com/902/28449011288_30c100c407_b.jpg');
+        background-position: center;
+    }
+
+    #btn4 {
+        background-image: url('https://i.ibb.co/p2shKht/Dog-grooming-blog-In-Post-100x100-300x176.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #btn8 {
+        background-image: url('https://lh3.googleusercontent.com/proxy/5p0emxDU9dT0KhAcoMEFmYslmI7YXD__J7DNOgRkE1ocHAj-yVUfPMy3zpOIgtOo2VSAYiFxQa5Hegyl0ujgcDncnYnu7luJZKc-t2VLaTOpZsuKlGl24H226rQCJCDRiv2NCL39RjJj6-LWApG5KkaQxd79c2PSDHQJNg');
+        background-position: center;
+    }
+
+    #btn7 {
+        background-image: url('https://64.media.tumblr.com/d2dd4d49af8e0801b1f71e93586633b7/tumblr_inline_p7g148UIv01r3vmpo_400.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #btn5 {
+        background-image: url('https://a.wattpad.com/useravatar/NatalieRoman_11.256.807671.jpg');
+        background-size: cover;
+    }
+
+    #btn6 {
+        background-image: url('https://img-9gag-fun.9cache.com/photo/a0dyQoL_460s.jpg');
+        background-position: -50px -50px;
+    }
+
+    #btn9 {
+        background-image: url('data:image/jpeg;base64,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');
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    * {
+        color: black;
+        font-weight: bold;
+    }
+
+    #inside {
+        background-color: white;
+    }
+</style>
+
+<body>
     <div class="grid-container">
-        <div id="background">
-            <div id="1" class="grid-item"><button onclick="ourFunction1()">1</button></div>
-        </div>
-        <div id="2" class="grid-item"><button onclick="ourFunction2()">2</button></div>
-        <div style="background-image: url('https://cdn.pixabay.com/photo/2019/04/14/20/05/duck-meet-4127713_960_720.jpg');" id="3" class="grid-item"><button onclick="ourFunction3()">3</button></div>  
-        <div id="4" class="grid-item"><button onclick="ourFunction4()">4</button></div>
-        <div id="5" class="grid-item"><button onclick="ourFunction5()">5</button></div>
-        <div id="6" class="grid-item"><button onclick="ourFunction6()">6</button></div>  
-        <div id="7" class="grid-item"><button onclick="ourFunction7()">7</button></div>
-        <div id="8" class="grid-item"><button onclick="ourFunction8()">8</button></div>
-        <div id="9" class="grid-item" onclick="ourFunction9(this)">9</div>  
-      </div>
-      <div id="info">0</div>
-      <div onclick="goA()">1</div>
+        <div id="btn1" class="grid-item" onclick="ourFunction1()" onmouseout="ourFunction1b()"></div>
+        <div id="btn2" class="grid-item" onclick="ourFunction2()" onmouseout="ourFunction2b()"></div>
+        <div id="btn3" class="grid-item" onclick="ourFunction3()" onmouseout="ourFunction3b()"></div>
+        <div id="btn4" class="grid-item" onclick="ourFunction4()" onmouseout="ourFunction4b()"></div>
+        <div id="btn5" class="grid-item" onclick="ourFunction5()" onmouseout="ourFunction5b()"></div>
+        <div id="btn6" class="grid-item" onclick="ourFunction6()" onmouseout="ourFunction6b()"></div>
+        <div id="btn7" class="grid-item" onclick="ourFunction7()" onmouseout="ourFunction7b()"></div>
+        <div id="btn8" class="grid-item" onclick="ourFunction8()" onmouseout="ourFunction8b()"></div>
+        <div id="btn9" class="grid-item" onclick="ourFunction9()" onmouseout="ourFunction9b()"></div>
+    </div>
+
+
+    <script>
+
+        function ourFunction1() {
+            elephantSound();
+            document.getElementById('btn1').innerHTML = '<div id="inside">An elephants heart is 60 times bigger than a humans.</div>';
+        }
+        function ourFunction1b() {
+            document.getElementById('btn1').innerHTML = '';
+        }
+        function ourFunction2() {
+            catSound();
+            document.getElementById('btn2').innerHTML = '<div id="inside">The oldest known pet cat existed 9,500 years ago</div>';
+        }
+        function ourFunction2b() {
+            document.getElementById('btn2').innerHTML = '';
+        }
+        function ourFunction3() {
+            rubberSound();
+            document.getElementById('btn3').innerHTML = '<div id="inside">The rubber duck originated in the late 1800s, and was originally made of the newly available hard rubber, and they were intended as a toy to chew on.</div>';
+        }
+        function ourFunction3b() {
+            document.getElementById('btn3').innerHTML = '';
+        }
+        function ourFunction4() {
+            puppySound();
+            document.getElementById('btn4').innerHTML = '<div id="inside">Newborn puppies cannot poop</div>';
+        }
+        function ourFunction4b() {
+            document.getElementById('btn4').innerHTML = '';
+        }
+        function ourFunction5() {
+            frogSound();
+            document.getElementById('btn5').innerHTML = '<div id="inside">Frogs need to be around areas with a water source to reproduce, but other than that, they are found on every continent except Antarctica and in almost every environment.</div>';
+        }
+        function ourFunction5b() {
+            document.getElementById('btn5').innerHTML = '';
+        }
+        function ourFunction6() {
+            gooseSound();
+            document.getElementById('btn6').innerHTML = '<div id="inside">Geese eat seeds, nuts, grass, plants and berries (and people). Geese are scary</div>';
+        }
+        function ourFunction6b() {
+            document.getElementById('btn6').innerHTML = '';
+        }
+        function ourFunction7() {
+            aardvarkSound();
+            document.getElementById('btn7').innerHTML = '<div id="inside">Aardvarks can eat up to 60 000 ants and termites in one night, thanks to its 30cm-long sticky tongue</div>';
+        }
+        function ourFunction7b() {
+            document.getElementById('btn7').innerHTML = '';
+        }
+        function ourFunction8() {
+            hippoSound();
+            document.getElementById('btn8').innerHTML = '<div id="inside">The hippo’s closest living relatives are whales and porpoises!</div>';
+        }
+        function ourFunction8b() {
+            document.getElementById('btn8').innerHTML = '';
+        }
+        function ourFunction9() {
+            penguinSound();
+            document.getElementById('btn9').innerHTML = '<div id="inside">Penguins are specially adapted to sink</div>';
+        }
+        function ourFunction9b() {
+            document.getElementById('btn9').innerHTML = '';
+        }
+        function elephantSound() {
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/elephant.mp3');
+            audio.play();
+        }
+        function catSound() {
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/cat.mp3');
+            audio.play();
+        }
+        function rubberSound() {
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/duck.mp3');
+            audio.play();
+        }
+        function puppySound() {
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/dog.mp3');
+            audio.play();
+        }
+        function frogSound() {
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/frog.mp3');
+            audio.play();
+        }
+        function gooseSound() {
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/komodo-dragon.mp3');
+            audio.play();
+        }
+        function aardvarkSound() {
+            var audio = new Audio('https://www.google.com/logos/fnbx/animal_sounds/anteater.mp3');
+            audio.play();
+        }
+        function hippoSound() {
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/hippopotamus.mp3');
+            audio.play();
+        }
+        function penguinSound() {
+            var audio = new Audio('https://www.google.com/logos/fnbx/animal_sounds/penguin.mp3');
+            audio.play();
+        }
+
+
+    </script>
+    <audio src="" controls></audio>
+    
+    <!-- <div><iframe width="300" height="60" src="https://vocaroo.com/embed/1eovnOG1B2tk" frameborder="0"></iframe><br><a href="https://voca.ro/1eovnOG1B2tk" title="Vocaroo Voice Recorder" target="_blank"></a></div> -->
 </body>
 
 </html>
