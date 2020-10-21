@@ -15,38 +15,88 @@
 </head>
 
 <body>
-
+<script>
+    function goA() {
+        document.getElementById('background').style.backgroundColor = 'blue';
+    }
+    function ourFunction1() {
+        document.body.style.backgroundColor = 'blue';
+        document.getElementById('1').innerHTML = '';
+    }
+    function ourFunction2() {
+        document.body.style.backgroundImage = "url('')"
+        document.getElementById('2').innerHTML = '';
+    }
+    function ourFunction3() { 
+        document.getElementById('info').innerHTML = 'Hello';
+    }
+    function ourFunction4() {
+        document.getElementById('4').outerHTML = '';
+        <style>
+             
+        </style>
+    }
+    function ourFunction5() {
+        document.getElementById('5').innerHTML = '';
+    }
+    function ourFunction6() {
+        document.getElementById('6').innerHTML = '';
+    }
+    function ourFunction7() {
+        document.getElementById('7').innerHTML = '';
+    }
+    function ourFunction8() {
+        document.getElementById('8').innerHTML = '';
+    }
+    function ourFunction9() {
+        document.getElementById('info').innerHTML += '1992123123';
+    }
+    function tell1() {
+        document.getElementById('info').innerHTML += '1'
+    }
+    
+</script>
     <style>
         .grid-container {
         display: grid;
-        grid-template-columns: auto auto auto;
-        background-color: #2196F3;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 300px 300px 300px;
         padding: 10px;
+        width: 900px;
+        background-color:crimson;
+        border: solid green;
+        border-radius: 12px;
+    
         }
-
         .grid-item {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: blueviolet;
         border: 1px solid rgba(0, 0, 0, 0.8);
         padding: 20px;
         font-size: 30px;
         text-align: center;
+        
+        }
+        #info {
+            clear: right;
         }
         
-    
     </style>
     
     <div class="grid-container">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>  
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>  
-        <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
-        <div class="grid-item">9</div>  
+        <div id="background">
+            <div id="1" class="grid-item"><button onclick="ourFunction1()">1</button></div>
+        </div>
+        <div id="2" class="grid-item"><button onclick="ourFunction2()">2</button></div>
+        <div style="background-image: url('https://cdn.pixabay.com/photo/2019/04/14/20/05/duck-meet-4127713_960_720.jpg');" id="3" class="grid-item"><button onclick="ourFunction3()">3</button></div>  
+        <div id="4" class="grid-item"><button onclick="ourFunction4()">4</button></div>
+        <div id="5" class="grid-item"><button onclick="ourFunction5()">5</button></div>
+        <div id="6" class="grid-item"><button onclick="ourFunction6()">6</button></div>  
+        <div id="7" class="grid-item"><button onclick="ourFunction7()">7</button></div>
+        <div id="8" class="grid-item"><button onclick="ourFunction8()">8</button></div>
+        <div id="9" class="grid-item" onclick="ourFunction9(this)">9</div>  
       </div>
-      
+      <div id="info">0</div>
+      <div onclick="goA()">1</div>
 </body>
 
 </html>
