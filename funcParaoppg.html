@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title></title>
 </head>
-<body onload="testOnLoad()">
+<body id="onload" onload="select(this)">
     <p>Ferdighet 2a - Alternative eventhandlere: onchange osv.</p>
     <input id="oninput" type="text" onchange="select(this)" oninput="select(this)"/>
     <h3 id="onmouseover" onmouseover="select(this)">mouseover</h3>
@@ -25,6 +25,8 @@
                 document.getElementById('info').innerHTML += '<li>onmouseout</li>';
             }  else if (selectedDiv.id == 'onchange') {
                 document.getElementById('info').innerHTML += '<li>onchange</li>';
+            }  else if (selectedDiv.id == 'onload') {
+                document.getElementById('info').innerHTML += '<li>onload</li>'
             }
            
         }  
