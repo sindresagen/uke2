@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <p>Ferdighet 12 - Funksjoner med returverdi</p>
+    <script>
+        tilfeldigBokstav();
+
+        function tilfeldigBokstav() {
+            var tall = tilfeldigTall(0, 28);
+            if (tall == 28) return 'å';
+            else if (tall == 27) return 'ø';
+            else if (tall > 26) return 'æ';
+            const charCodeA = 'a'.charCodeAt(0);
+            return String.fromCharCode(tall - 10 + charCodeA);
+        }
+    </script>
+</body>
+</html>

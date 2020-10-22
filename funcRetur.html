@@ -13,6 +13,7 @@
 <body>
     <p>Ferdighet 12 - Funksjoner med returverdi</p>
     <script>
+        var ord = tilfeldigTallOrd();
         tilfeldigFirkant();
 
         function tilfeldigFirkant() {
@@ -30,7 +31,7 @@
                 delAvStylePx('width', bredde) +
                 delAvStylePx('height', høyde) +
                 delAvStyle('background-color', farge) +
-                '"></div>';
+                '"> ' + tilfeldigOrd() + '</div>';
             document.write(divHtml);
             if (Math.random() < 0.9) tilfeldigFirkant();
         }
@@ -58,6 +59,25 @@
             if (tall < 10) return tall;
             const charCodeA = 'a'.charCodeAt(0);
             return String.fromCharCode(tall - 10 + charCodeA);
+        }
+
+        function tilfeldigTallOrd() {
+        var tall = tilfeldigTall(0, 28);
+        if      (tall == 28) return 'å';
+        else if (tall == 27) return 'ø';
+        else if (tall == 26) return 'æ';
+        const charCodeA = 'a'.charCodeAt(0);
+        return String.fromCharCode(tall - 10 + charCodeA);
+            
+        }
+
+        function tilfeldigOrd() {
+            return +
+            tilfeldigTallOrd() +
+            tilfeldigTallOrd() +
+            tilfeldigTallOrd() +
+            tilfeldigTallOrd() +
+            tilfeldigTallOrd();
         }
 
         function tilfeldigTall(minimum, maksimum) {
