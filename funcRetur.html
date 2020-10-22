@@ -63,17 +63,17 @@
 
         function tilfeldigTallOrd() {
         var tall = tilfeldigTall(0, 28);
+        console.log(tall)
         if      (tall == 28) return 'å';
         else if (tall == 27) return 'ø';
         else if (tall == 26) return 'æ';
         const charCodeA = 'a'.charCodeAt(0);
-        return String.fromCharCode(tall - 10 + charCodeA);
+        return String.fromCharCode(tall + charCodeA);
             
         }
 
         function tilfeldigOrd() {
-            return +
-            tilfeldigTallOrd() +
+            return tilfeldigTallOrd() +
             tilfeldigTallOrd() +
             tilfeldigTallOrd() +
             tilfeldigTallOrd() +
