@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="info"></div>
+            <div id="btn1" onclick="ourFunction(this)">btn1</div>
+            <div id="btn2" onclick="ourFunction(this)">btn2</div>
+            <div id="btn3" onmousedown="ourFunction(this)" onmouseup="ourFunction2(this)">btn3</div>
+    <script>
+        var selectedDiv = '';
+        function ourFunction(clickDiv) {
+        selectedDiv = clickDiv;
+        if (selectedDiv.id == 'btn1') {
+            document.getElementById('info').innerHTML += 'du har trykt på den øverste. '
+        } 
+        else if (selectedDiv.id == 'btn2') {
+            document.getElementById('info').innerHTML += 'du har trykt på den nederste. '
+        }
+        else if (selectedDiv.id == 'btn3') {
+            document.getElementById('info').innerHTML += 'alle gode ting er tre. '
+        }
+        
+    }
+    var selectedDiv2= '';
+    function ourFunction2(clickDiv2) {
+        selectedDiv = clickDiv2;
+        if (selectedDiv2.id == 'btn3') {
+            document.getElementById('info').innerHTML += 'mouseout'
+        }
+           
+    }
+
+    
+    </script>
+</body>
+</html>
