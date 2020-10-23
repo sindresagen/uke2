@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Live Share</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 300px 300px 300px;
+        padding: 10px;
+        width: 900px;
+        border: purple;
+        border-radius: 37px;
+
+    }
+
+    .grid-item {
+        background-color: blueviolet;
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+    #info {
+        clear: right;
+    }
+
+    #btn1 {
+        background-image: url('https://p0.pikrepo.com/preview/162/599/elephant-walking-on-brown-field-during-daytime.jpg');
+        background-position: center;
+    }
+
+    #btn2 {
+        background-image: url('https://live.staticflickr.com/902/28449011288_30c100c407_b.jpg');
+        background-position: center;
+    }
+    
+    #btn3 {
+        background-image: url('https://cdn.pixabay.com/photo/2019/04/14/20/05/duck-meet-4127713_960_720.jpg');
+    }
+
+    #btn4 {
+        background-image: url('https://i.ibb.co/p2shKht/Dog-grooming-blog-In-Post-100x100-300x176.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+        
+    #btn5 {
+        background-image: url('https://a.wattpad.com/useravatar/NatalieRoman_11.256.807671.jpg');
+        background-size: cover;
+    }
+    
+    #btn6 {
+        background-image: url('https://img-9gag-fun.9cache.com/photo/a0dyQoL_460s.jpg');
+        background-position: -50px -50px;
+    }
+      
+    #btn7 {
+        background-image: url('https://64.media.tumblr.com/d2dd4d49af8e0801b1f71e93586633b7/tumblr_inline_p7g148UIv01r3vmpo_400.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #btn8 {
+        background-image: url('https://animalfactguide.com/wp-content/uploads/2013/01/iStock_000003506850XSmall.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    
+    #btn9 {
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3e/Emperor_Penguins_%2815885611526%29.jpg');
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    * {
+        color: black;
+        font-weight: bold;
+    }
+
+    #inside {
+        background-color: white;
+        font-size: 40px;   
+        position: absolute;
+        top: 20px;
+        width: 40vw;
+        right: 8vw;
+        /* position: left 900px; */
+        
+    }
+</style>
+
+<body>
+    <div class="grid-container">
+        <div id="btn1" class="grid-item" onclick="select(this)" onmouseout="select2(this)"></div>
+        <div id="btn2" class="grid-item" onclick="select(this)" onmouseout="select2(this)"></div>
+        <div id="btn3" class="grid-item" onclick="select(this)" onmouseout="select2(this)"></div>
+        <div id="btn4" class="grid-item" onclick="select(this)" onmouseout="select2(this)"></div>
+        <div id="btn5" class="grid-item" onclick="select(this)" onmouseout="select2(this)"></div>
+        <div id="btn6" class="grid-item" onclick="select(this)" onmouseout="select2(this)"></div>
+        <div id="btn7" class="grid-item" onclick="select(this)" onmouseout="select2(this)"></div>
+        <div id="btn8" class="grid-item" onclick="select(this)" onmouseout="select2(this)"></div>
+        <div id="btn9" class="grid-item" onclick="select(this)" onmouseout="select2(this)"></div>
+    </div>
+    <div id="inside"></div>
+
+
+    <script>
+        var selectedDiv = '';
+        function select(clickDiv) {
+            selectedDiv = clickDiv;
+            if (selectedDiv.id == 'btn1') {
+                document.getElementById('inside').innerHTML = 'An elephants heart is 60 times bigger than a humans.';
+                var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/elephant.mp3');
+                audio.play();
+        } 
+        else if (selectedDiv.id == 'btn2') {
+            document.getElementById('inside').innerHTML = 'The oldest known pet cat existed 9,500 years ago';
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/cat.mp3');
+            audio.play();
+        } 
+        else if (selectedDiv.id == 'btn3') {
+            document.getElementById('inside').innerHTML = 'The rubber duck originated in the late 1800s, and was originally made of the newly available hard rubber, and they were intended as a toy to chew on.';
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/duck.mp3');
+            audio.play();
+        } 
+        else if (selectedDiv.id == 'btn4') {
+            document.getElementById('inside').innerHTML = 'Newborn puppies cannot poop</div>';
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/dog.mp3');
+            audio.play();
+        } 
+        else if (selectedDiv.id == 'btn5') {
+            document.getElementById('inside').innerHTML = 'Frogs need to be around areas with a water source to reproduce, but other than that, they are found on every continent except Antarctica and in almost every environment.';
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/frog.mp3');
+            audio.play();
+        } 
+        else if (selectedDiv.id == 'btn6') {
+            document.getElementById('inside').innerHTML = 'Geese eat seeds, nuts, grass, plants and berries (and people). Geese are scary';
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/komodo-dragon.mp3');
+            audio.play();
+        } 
+        else if (selectedDiv.id == 'btn7') {
+            document.getElementById('inside').innerHTML = 'Aardvarks can eat up to 60 000 ants and termites in one night, thanks to its 30cm-long sticky tongue';
+            var audio = new Audio('https://www.google.com/logos/fnbx/animal_sounds/anteater.mp3');
+            audio.play();
+        } 
+        else if (selectedDiv.id == 'btn8') {
+            document.getElementById('inside').innerHTML = 'The hippo’s closest living relatives are whales and porpoises!';
+            var audio = new Audio('//www.google.com/logos/fnbx/animal_sounds/hippopotamus.mp3');
+            audio.play();
+        } 
+        else if (selectedDiv.id == 'btn9') {
+            document.getElementById('inside').innerHTML = 'Penguins are specially adapted to sink';
+            var audio = new Audio('https://www.google.com/logos/fnbx/animal_sounds/penguin.mp3');
+            audio.play();
+        }
+    };
+
+        var selectedDiv2 = '';
+        function select2(clickDiv2) {
+            selectedDiv2 = clickDiv2;
+            if (selectedDiv2.id == 'btn1') {
+                document.getElementById('inside').innerHTML = '';
+            } else if (selectedDiv2.id == 'btn2') {
+                document.getElementById('inside').innerHTML = '';
+            } else if (selectedDiv2.id == 'btn3') {
+                document.getElementById('inside').innerHTML = '';
+            } else if (selectedDiv2.id == 'btn4') {
+                document.getElementById('inside').innerHTML = '';
+            } else if (selectedDiv2.id == 'btn5') {
+                document.getElementById('inside').innerHTML = '';
+            } else if (selectedDiv2.id == 'btn6') {
+                document.getElementById('inside').innerHTML = '';
+            } else if (selectedDiv2.id == 'btn7') {
+                document.getElementById('inside').innerHTML = '';
+            } else if (selectedDiv2.id == 'btn8') {
+                document.getElementById('inside').innerHTML = '';
+            } else if (selectedDiv2.id == 'btn9') {
+                document.getElementById('inside').innerHTML = '';
+            }
+        };
+
+    </script>
+    </body>
+
+</html>
